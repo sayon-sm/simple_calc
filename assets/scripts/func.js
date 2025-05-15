@@ -1,18 +1,20 @@
 let value = parseInt(defaultValue); // changes with each operation
 const calLog = [];
 
+// gets the number entered by user from input field
 function getUserInput() {
   return parseInt(userInput.value);
 }
 
-// creates and writes the each operation
+// creates history and writes each operation to keep track
 function writeLog(operator, prev, curr) {
   output = `${prev} ${operator} ${curr}`;
-  outputResult(value, output); // vendor.js
+  outputResult(value, output); // displays recent calculation performed
   calLog.push(output);
-  console.log(calLog);
+  console.log(calLog); // displays all calculation performed by the user
 }
 
+// performs the calculation
 function calc(operator) {
   const enteredNum = getUserInput();
   const prev = value; // previous value before calculation

@@ -1,6 +1,6 @@
 /* This is basically a fail safe mechanism to ensure
 our scripts default behaviour does not 
-divide 0 by any number user enters */
+divide 0 by any number user enters on the first calculation*/
 
 defaultValue = prompt('Enter the 1st value of the operation !');
 
