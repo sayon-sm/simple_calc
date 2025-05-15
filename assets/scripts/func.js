@@ -1,4 +1,4 @@
-value = parseInt(defaultValue); // changes with each operation
+let value = parseInt(defaultValue); // changes with each operation
 
 function getUserInput() {
   return parseInt(userInput.value);
