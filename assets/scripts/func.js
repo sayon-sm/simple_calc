@@ -9,32 +9,39 @@ function writeLog(operator, prev, curr) {
   output = `${prev} ${operator} ${curr}`;
   outputResult(value, output); // vendor.js
 }
-function add() {
+
+function calc(operator) {
   const enteredNum = getUserInput();
   const prev = value; // previous value before calculation
-  value += enteredNum;
-  writeLog('+', prev, enteredNum);
+  if (operator == '+') {
+    value += enteredNum;
+    writeLog(operator, prev, enteredNum);
+  } else if (operator == '-') {
+    value -= enteredNum;
+    writeLog(operator, prev, enteredNum);
+  } else if (operator == '*') {
+    value *= enteredNum;
+    writeLog(operator, prev, enteredNum);
+  } else if (operator == '/') {
+    value /= enteredNum;
+    writeLog(operator, prev, enteredNum);
+  }
+}
+
+function add() {
+  calc('+');
 }
 
 function sub() {
-  const enteredNum = getUserInput();
-  const prev = value; // previous value before calculation
-  value -= enteredNum;
-  writeLog('-', prev, enteredNum);
+  calc('-');
 }
 
 function multiply() {
-  const enteredNum = getUserInput();
-  const prev = value; // previous value before calculation
-  value *= enteredNum;
-  writeLog('*', prev, enteredNum);
+  calc('*');
 }
 
 function divide() {
-  const enteredNum = getUserInput();
-  const prev = value; // previous value before calculation
-  value /= enteredNum;
-  writeLog('/', prev, enteredNum);
+  calc('/');
 }
 
 addBtn.addEventListener('click', add);
