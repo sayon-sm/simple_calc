@@ -2,4 +2,8 @@
 our scripts default behaviour does not 
 divide 0 by any number user enters */
 
-defaultValue = prompt('enter the 1st value of your operation !');
+defaultValue = prompt('Enter the 1st value of the operation !');
+
+alert(
+  'Now add the second value in the input aree ! \nThen use the button to perform your desired calculation !'
+);

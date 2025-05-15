@@ -1,4 +1,5 @@
 let value = parseInt(defaultValue); // changes with each operation
+const calLog = [];
 
 function getUserInput() {
   return parseInt(userInput.value);
@@ -8,6 +9,8 @@ function getUserInput() {
 function writeLog(operator, prev, curr) {
   output = `${prev} ${operator} ${curr}`;
   outputResult(value, output); // vendor.js
+  calLog.push(output);
+  console.log(calLog);
 }
 
 function calc(operator) {
