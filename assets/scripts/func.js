@@ -20,17 +20,14 @@ function calc(operator) {
   const prev = value; // previous value before calculation
   if (operator == '+') {
     value += enteredNum;
-    writeLog(operator, prev, enteredNum);
   } else if (operator == '-') {
     value -= enteredNum;
-    writeLog(operator, prev, enteredNum);
   } else if (operator == '*') {
     value *= enteredNum;
-    writeLog(operator, prev, enteredNum);
   } else if (operator == '/') {
     value /= enteredNum;
-    writeLog(operator, prev, enteredNum);
   }
+  writeLog(operator, prev, enteredNum);
 }
 
 function add() {
