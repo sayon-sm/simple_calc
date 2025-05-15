@@ -1,4 +1,4 @@
-let value = parseInt(defaultValue); // changes with each operation
+let value = parseInt(defaultValue); // changes with each operation becomes the result
 const calLog = [];
 
 // gets the number entered by user from input field
