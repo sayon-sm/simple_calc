@@ -1,13 +1,13 @@
 'use strict';
-let value = parseInt(defaultValue); // changes with each operation becomes the result
+let value = parseInt(defaultValue); // becomes result of calculation, from initial.js
 const calLog = [];
 
-// gets the number entered by user from input field
+// gets number from input field
 function getUserInput() {
   return parseInt(userInput.value);
 }
 
-// creates history and writes each operation to keep track
+// creates & writes each operation performed
 function writeLog(operator, prev, curr) {
   const output = `${prev} ${operator} ${curr}`;
   outputResult(value, output); // displays recent calculation performed
