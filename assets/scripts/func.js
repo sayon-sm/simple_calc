@@ -1,5 +1,5 @@
 'use strict';
-let value = parseInt(defaultValue); // becomes result of calculation, from initial.js
+let value = defaultValue; // becomes result of calculation, from initial.js
 const calLog = [];
 
 // gets number from input field
