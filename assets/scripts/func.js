@@ -1,3 +1,4 @@
+'use strict';
 let value = parseInt(defaultValue); // changes with each operation becomes the result
 const calLog = [];
 
@@ -8,7 +9,7 @@ function getUserInput() {
 
 // creates history and writes each operation to keep track
 function writeLog(operator, prev, curr) {
-  output = `${prev} ${operator} ${curr}`;
+  const output = `${prev} ${operator} ${curr}`;
   outputResult(value, output); // displays recent calculation performed
   calLog.push(output);
   console.log(calLog); // displays all calculation performed by the user
