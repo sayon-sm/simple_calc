@@ -2,11 +2,6 @@
 let value = defaultValue; // becomes result of calculation, from initial.js
 const calLog = [];
 
-// gets number from input field
-function getUserInput() {
-  return parseInt(userInput.value);
-}
-
 // creates & writes each operation performed
 function writeLog(operator, prev, curr) {
   const output = `${prev} ${operator} ${curr}`;
@@ -17,7 +12,7 @@ function writeLog(operator, prev, curr) {
 
 // performs the calculation
 function calc(operator) {
-  const enteredNum = getUserInput();
+  const enteredNum = parseInt(userInput.value); //get user input
   const prev = value; // previous value before calculation
   if (operator == '+') {
     value += enteredNum;
@@ -31,23 +26,7 @@ function calc(operator) {
   writeLog(operator, prev, enteredNum);
 }
 
-function add() {
-  calc('+');
-}
-
-function sub() {
-  calc('-');
-}
-
-function multiply() {
-  calc('*');
-}
-
-function divide() {
-  calc('/');
-}
-
-addBtn.addEventListener('click', add);
-subtractBtn.addEventListener('click', sub);
-multiplyBtn.addEventListener('click', multiply);
-divideBtn.addEventListener('click', divide);
+addBtn.addEventListener('click', calc.bind(this, '+'));
+subtractBtn.addEventListener('click', calc.bind(this, '-'));
+multiplyBtn.addEventListener('click', calc.bind(this, '*'));
+divideBtn.addEventListener('click', calc.bind(this, '/'));
