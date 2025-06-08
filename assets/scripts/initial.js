@@ -1,15 +1,15 @@
 'use strict';
 /* This is basically a fail safe mechanism to ensure
 our scripts default behaviour does not 
-divide 0 by the number user enters on the first operation*/
+divide 0 by the number, getting the first operand here*/
 
-let defaultValue = parseInt(prompt('Enter the 1st value of the operation !'));
+let firstOperand = parseInt(prompt('Enter the 1st value of the operation !'));
 
 // validating user input
 let check = true;
 while (check) {
-  if (!defaultValue) {
-    defaultValue = parseInt(prompt('Enter the 1st value of the operation !'));
+  if (!firstOperand) {
+    firstOperand = parseInt(prompt('Enter the 1st value of the operation !'));
   } else check = false;
 }
 

@@ -1,5 +1,5 @@
 'use strict';
-let value = defaultValue; // becomes result of calculation, from initial.js
+let value = firstOperand; // becomes result of calculation, from initial.js
 const calLog = [];
 
 // creates & writes each operation performed
@@ -26,7 +26,7 @@ function calc(operator) {
   writeLog(operator, prev, enteredNum);
 }
 
-addBtn.addEventListener('click', calc.bind(this, '+'));
-subtractBtn.addEventListener('click', calc.bind(this, '-'));
-multiplyBtn.addEventListener('click', calc.bind(this, '*'));
-divideBtn.addEventListener('click', calc.bind(this, '/'));
+addBtn.addEventListener('click', calc.bind(null, '+'));
+subtractBtn.addEventListener('click', calc.bind(null, '-'));
+multiplyBtn.addEventListener('click', calc.bind(null, '*'));
+divideBtn.addEventListener('click', calc.bind(null, '/'));
