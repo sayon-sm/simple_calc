@@ -1,6 +1,6 @@
 # Unconventional calculator
 
-## this is a practice project to learn
+## This is a practice project to learn
 
 - JavaScript syntax
 - functions
