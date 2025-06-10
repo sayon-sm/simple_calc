@@ -3,5 +3,5 @@
 ## This is a practice project to learn
 
 - JavaScript syntax
-- functions
+- Functions
 - Conditional statements
